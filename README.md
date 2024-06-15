@@ -123,7 +123,7 @@ The project will now be running locally on http://localhost:3001.
 
 
 
-# Sale&Rent - Property Listing Platform
+# TopStories - Top News Platform
 
 ## Summary
 
