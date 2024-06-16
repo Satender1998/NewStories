@@ -50,19 +50,23 @@ export default function Home() {
       try {
         const topStoriesRes = await axios.get(
           // "http://localhost:3001/topstories"
-          `https://newstories.onrender.com/topStories}`
+          // `https://newstories.onrender.com/topStories}`
+          "https://newstories.onrender.com/topStories"
         );
         setTopStories(topStoriesRes.data.stories);
 
         const bestStoriesRes = await axios.get(
           // "http://localhost:3001/beststories"
-          `https://newstories.onrender.com/bestStories`
+          // `https://newstories.onrender.com/bestStories`
+          "https://newstories.onrender.com/bestStories"
+
         );
         setBestStories(bestStoriesRes.data.stories);
 
         const newStoriesRes = await axios.get(
           // "http://localhost:3001/newstories"
-          `https://newstories.onrender.com/newStories`
+          // `https://newstories.onrender.com/newStories`
+          "https://newstories.onrender.com/newStories"
         );
         setNewStories(newStoriesRes.data.stories);
       } catch (error) {
