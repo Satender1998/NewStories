@@ -20,21 +20,49 @@ export default function Home() {
   console.log(newStories);
   // console.log(topStories);
 
+  // useEffect(() => {
+  //   const fetchStories = async () => {
+  //     try {
+  //       const topStoriesRes = await axios.get(
+  //         "http://localhost:3001/topstories"
+  //       );
+  //       setTopStories(topStoriesRes.data.stories);
+
+  //       const bestStoriesRes = await axios.get(
+  //         "http://localhost:3001/beststories"
+  //       );
+  //       setBestStories(bestStoriesRes.data.stories);
+
+  //       const newStoriesRes = await axios.get(
+  //         "http://localhost:3001/newstories"
+  //       );
+  //       setNewStories(newStoriesRes.data.stories);
+  //     } catch (error) {
+  //       setError("Error fetching stories. Please try again later.");
+  //       console.error(error);
+  //     }
+  //   };
+
+  //   fetchStories();
+  // }, []);
   useEffect(() => {
     const fetchStories = async () => {
       try {
         const topStoriesRes = await axios.get(
-          "http://localhost:3001/topstories"
+          // "http://localhost:3001/topstories"
+          `https://newstories.onrender.com/topStories}`
         );
         setTopStories(topStoriesRes.data.stories);
 
         const bestStoriesRes = await axios.get(
-          "http://localhost:3001/beststories"
+          // "http://localhost:3001/beststories"
+          `https://newstories.onrender.com/bestStories`
         );
         setBestStories(bestStoriesRes.data.stories);
 
         const newStoriesRes = await axios.get(
-          "http://localhost:3001/newstories"
+          // "http://localhost:3001/newstories"
+          `https://newstories.onrender.com/newStories`
         );
         setNewStories(newStoriesRes.data.stories);
       } catch (error) {
