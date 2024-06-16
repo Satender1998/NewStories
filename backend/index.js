@@ -20,6 +20,10 @@ const getStoryDetails = async (id) => {
   return response.data;
 };
 
+app.get('/',(req, res) => {
+  res.send("Hello World")
+})
+
 // Top Stories API
 app.get("/topstories", async (req, res) => {
   try {
